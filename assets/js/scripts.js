@@ -1,3 +1,4 @@
+//Menu mobile
 const btnMobile = document.getElementById('hamburger');
 
 btnMobile.addEventListener('click', () => {
