@@ -59,6 +59,18 @@ body {
     display: none;
 }
 
+.btnMobile {
+    border: 1px solid white;
+    width: 60px;
+    height: 60px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+}
+
 .line {
     display: none;
     background: white;
@@ -76,6 +88,7 @@ body {
 
     position: relative;
     top: 10px;
+    transform: translateY(-50px);
 }
 
 .mobile-nav a {
@@ -95,9 +108,13 @@ body {
         display: none;
     }
 
+    .btnMobile {
+        display: flex;
+    }
+
     .line {
         display: block;
-        margin-right: 10px;
+        margin-right: 2px;
     }
 
     #menu {
@@ -105,5 +122,18 @@ body {
     }
     #menu-mobile.active #menu {
         display: block;
+        animation-name: born;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes born {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
